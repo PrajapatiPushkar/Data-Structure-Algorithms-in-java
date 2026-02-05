@@ -1,5 +1,3 @@
-package Array.Demo;
-
 import java.util.Scanner;
 
 public class OccurrencesOfNumber {

@@ -1,5 +1,3 @@
-package Array.Demo;
-
 /*
  * check the given array is sorted or not
  */
