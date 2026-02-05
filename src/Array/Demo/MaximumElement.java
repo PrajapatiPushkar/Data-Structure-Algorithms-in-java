@@ -1,6 +1,4 @@
-package Demo;
-
-import java.util.Scanner;
+package Array.Demo;
 
 public class MaximumElement {
     public static void main(String[] args) {

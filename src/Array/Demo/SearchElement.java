@@ -1,4 +1,4 @@
-package Demo;
+package Array.Demo;
 
 /*Search the given element x in the array.  if present then return the index else return - 1.
 input : arr[] = {1,5,3}; x = 5
