@@ -67,6 +67,56 @@ public class ArrayProblems {
         return ans;
     }
 
+    //Count the number of Zeroes and Ones
+    public static int[] getZeroOneCount(int[] arr) {
+        int zeroCount = 0;
+        int OneCount = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == 0) {
+                zeroCount++;
+            } else {
+                //arr[i] = 1
+                OneCount++;
+            }
+        }
+        int[] ans  = {zeroCount, OneCount};
+        return ans;
+    }
+
+    //Find first unsorted Element in Array
+    public static int getUnsortedElement(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i+1] <= arr[i]) {
+                return arr[i+1];
+            }
+        }
+        return -1;
+    }
+
+    // Swap Alternate Element in an Array
+    public static int[] getSwapElement(int[] arr) {
+        for (int i = 0; i < arr.length - 1; i+=2) {
+            int temp = arr[i];
+            arr[i] = arr[i+1];
+            arr[i+1] = temp;
+        }
+        return arr;
+    }
+
+    // Print Array intersection element
+    public static void getIntersectionElement(int[] arr1, int[] arr2) {
+       for (int i = 0; i < arr1.length; i++) {
+           for (int j = 0; j < arr2.length; j++) {
+               if (arr1[i] == arr2[j]) {
+                   System.out.print(arr1[i] + " ");
+                   arr2[j] = Integer.MIN_VALUE;
+                   break;
+               }
+           }
+       }
+    }
+
     public static void main(String[] args) {
 //        int[] arr = {2,3,4,5};
 //        System.out.println(getAverage(arr));
@@ -86,9 +136,27 @@ public class ArrayProblems {
 //        int[] arr = {1,2,3,4,5,6,7,8};
 //        System.out.println(findMax(arr));
 
-        int[] arr = {2,-3,-5,-7,9};
-        int[] ans = getPosNegSum(arr);
-        System.out.println("Positive sum = " + ans[0]);
-        System.out.println("Negative sum = " + ans[1]);
+//        int[] arr = {2,-3,-5,-7,9};
+//        int[] ans = getPosNegSum(arr);
+//        System.out.println("Positive sum = " + ans[0]);
+//        System.out.println("Negative sum = " + ans[1]);
+
+//        int[] arr = {0,1,1,1,1,0};
+//        int[] ans = getZeroOneCount(arr);
+//        System.out.println("ZeroCount = " + ans[0]);
+//        System.out.println("OneCount = " + ans[1]);
+
+//        int[] arr = {1,2,5,4,9};
+//        System.out.println(getUnsortedElement(arr));
+
+//        int[] ans = {1,2,3,4,5,6};
+//        int[] result = getSwapElement(ans);
+//        for(int num : result) {
+//            System.out.print( num + " ");
+//        }
+
+        int[] arr1 = {1,2,3,4,5,6};
+        int[] arr2 = {2,2,3,4};
+        getIntersectionElement(arr1,arr2);
     }
 }
